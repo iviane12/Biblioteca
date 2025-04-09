@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Biblioteca Estante Mágica - Descubra livros incríveis e resenhas.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Biblioteca Estante Mágica</title>
+</head>
+<body>
+    <header>
+        <div class="header-banner">
+            <img src="https://i.pinimg.com/474x/c8/33/9f/c8339f7e660da971ab4fe0fb59f0dbf9.jpg" alt="Banner Biblioteca" class="header-banner-img">
+        </div>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="logo.webp" alt="Logo Biblioteca" class="logo">
+            </div>
+            <div class="header-text">
+                <div class="banner">
+                    <h1>Biblioteca da Estante Mágica</h1>
+                    <p class="quote">"Um livro é um sonho que você segura nas mãos"</p>
+                    <div class="buttons">
+                        <a href="blog.html" class="btn">📝 Leia no Blog</a>
+                        <a href="index.html" class="btn">🏠 Voltar ao Início</a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" aria-label="Ir para a página inicial">🏠 Início</a></li>
+                    <li><a href="biblioteca.html" aria-label="Ir para a biblioteca">📖 Biblioteca</a></li>
+                    <li><a href="blog.html" aria-label="Ir para o blog">📰 Blog</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="login-btn">Entrar</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="livros" class="categoria">
+            <div class="container">
+                <h2>Livros em Destaque</h2>
+                <div class="livro-itens">
+                    <article class="item">
+                        <img src="https://i.pinimg.com/474x/2d/1b/18/2d1b18dd8b7935341f61cb15ff8445c8.jpg" alt="Minha Vida não tão Perfeita" class="item-imagem">
+                        <div class="item-info">
+                            <h3>Minha Vida não tão Perfeita</h3>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <img src="https://i.pinimg.com/474x/7f/e5/d9/7fe5d984ad6e3b0387b1d316ac7d75f9.jpg" alt="Como Eu Era Antes de Você" class="item-imagem">
+                        <div class="item-info">
+                            <h3>Como Eu Era Antes de Você</h3>
+                        </div>
+                    </article>
+                    <article class="item">
+                        <img src="https://i.pinimg.com/474x/5e/42/ea/5e42eafb03ec113f541cf46d7a8c7298.jpg" alt="Amor Real" class="item-imagem">
+                        <div class="item-info">
+                            <h3>Amor Real</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="home" class="section-home">
+            <div class="destaques">
+                <h2>Carrossel dos Livros Disponíveis</h2>
+                <div class="carousel">
+                    <button class="carousel-btn prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-container">
+                        <!-- Livros em destaque serão inseridos via JavaScript -->
+                    </div>
+                    <button class="carousel-btn next" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ultimas-resenhas">
+                <h2>Últimas Resenhas</h2>
+                <div class="resenhas-grid">
+                    <!-- Resenhas serão inseridas via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Sua biblioteca digital e blog literário favoritos.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#biblioteca">Biblioteca</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Estante Mágica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

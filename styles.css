@@ -1,0 +1,1019 @@
+/* ========== ESTILOS DA PÁGINA INICIAL ========== */
+
+/* ========== VARIÁVEIS E RESET ========== */
+:root {
+    --primary-color: #2c3e50; /* Cor primária */
+    --secondary-color: #f8fdfe; /* Cor secundária */
+    --accent-color: #e74c3c; /* Cor de destaque */
+    --background-color: #f5f6fa; /* Cor de fundo */
+    --text-color: #2c3e50; /* Cor do texto */
+    --white: #fefefe; /* Cor branca */
+    --gray-light: #f8f9fa; /* Cinza claro */
+    --gray: #6c757d; /* Cinza */
+    --shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra */
+    --transition: all 0.3s ease; /* Transição */
+    --border-radius: 8px; /* Raio de borda */
+    --header-height: 150px; /* Altura do cabeçalho */
+}
+
+/* ========== RESET GERAL ========== */
+* {
+    margin: 0; /* Margem zero */
+    padding: 0; /* Preenchimento zero */
+    box-sizing: border-box; /* Box-sizing */
+}
+
+/* ========== ESTILOS DO CORPO ========== */
+body {
+    font-family: Arial, sans-serif; /* Fonte do corpo */
+    margin: 0; /* Margem zero */
+    padding: 0; /* Preenchimento zero */
+    background-color: #f1f1f1; /* Cor de fundo do corpo */
+}
+
+/* ========== ESTILOS DO HEADER ========== */
+.header {
+    background-color: #4CAF50; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 20px 0; /* Preenchimento do cabeçalho */
+    text-align: center; /* Alinhamento do texto */
+}
+
+.header-top {
+    text-align: center; /* Alinhamento do texto */
+    padding: 1.5rem 0; /* Preenchimento */
+}
+
+.header-top h1 {
+    color: var(--primary-color); /* Cor do título */
+    font-size: 2rem; /* Tamanho da fonte */
+    margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+.quote {
+    color: var(--secondary-color); /* Cor da citação */
+    font-style: italic; /* Estilo itálico */
+}
+
+/* ========== NAVEGAÇÃO ========== */
+.nav-bar {
+    background: var(--primary-color); /* Cor de fundo da barra de navegação */
+    padding: 1rem 2rem; /* Preenchimento */
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Justificação */
+    align-items: center; /* Alinhamento */
+}
+
+.nav-menu {
+    display: flex; /* Flexbox */
+    list-style: none; /* Sem estilo de lista */
+    gap: 2rem; /* Espaçamento entre itens */
+}
+
+.nav-menu a {
+    color: var(--white); /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+    font-weight: 500; /* Peso da fonte */
+    transition: var(--transition); /* Transição */
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color); /* Cor do link ao passar o mouse */
+}
+
+.nav-buttons {
+    display: flex; /* Flexbox */
+    gap: 1rem; /* Espaçamento entre botões */
+    align-items: center; /* Alinhamento */
+}
+
+.theme-btn, 
+.login-btn {
+    padding: 0.5rem 1rem; /* Preenchimento */
+    border: none; /* Sem borda */
+    border-radius: var(--border-radius); /* Raio de borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: var(--transition); /* Transição */
+}
+
+.theme-btn {
+    background: transparent; /* Fundo transparente */
+    color: var(--white); /* Cor do texto */
+}
+
+.login-btn {
+    background: var(--secondary-color); /* Cor de fundo do botão de login */
+    color: var(--white); /* Cor do texto */
+}
+
+.login-btn:hover {
+    background: #2980b9; /* Cor ao passar o mouse */
+}
+
+/* ========== CONTEÚDO PRINCIPAL ========== */
+main {
+    padding: 20px; /* Preenchimento */
+}
+
+.section-home {
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centralização */
+}
+
+/* ========== CARROSSEL ========== */
+.destaques {
+    margin-bottom: 3rem; /* Margem inferior */
+}
+
+.carousel {
+    position: relative; /* Posição relativa */
+    padding: 0 40px; /* Preenchimento */
+    margin-top: 1rem; /* Margem superior */
+}
+
+.carousel-container {
+    display: flex; /* Flexbox */
+    overflow-x: auto; /* Rolagem horizontal */
+}
+
+.carousel-btn {
+    position: absolute; /* Posição absoluta */
+    top: 50%; /* Alinhamento vertical */
+    transform: translateY(-50%); /* Centralização vertical */
+    background: var(--secondary-color); /* Cor de fundo */
+    color: var(--white); /* Cor do texto */
+    border: none; /* Sem borda */
+    width: 40px; /* Largura */
+    height: 40px; /* Altura */
+    border-radius: 50%; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: var(--transition); /* Transição */
+}
+
+.carousel-btn:hover {
+    background: var(--primary-color); /* Cor ao passar o mouse */
+}
+
+.carousel-btn.prev { left: 0; } /* Botão anterior */
+.carousel-btn.next { right: 0; } /* Botão próximo */
+
+/* ========== CARDS ========== */
+.livro-card,
+.resenha-card {
+    background: var(--white); /* Cor de fundo */
+    border-radius: var(--border-radius); /* Raio de borda */
+    overflow: hidden; /* Ocultar overflow */
+    box-shadow: var(--shadow); /* Sombra */
+    transition: var(--transition); /* Transição */
+}
+
+.livro-card {
+    flex: 0 0 auto; /* Flexbox */
+    width: 200px; /* Largura */
+    margin: 10px; /* Margem */
+    text-align: center; /* Alinhamento do texto */
+}
+
+.livro-card:hover,
+.resenha-card:hover {
+    transform: translateY(-5px); /* Efeito de hover */
+}
+
+.livro-card img {
+    width: 100%; /* Largura total */
+    height: 300px; /* Altura */
+    object-fit: cover; /* Ajuste da imagem */
+}
+
+.livro-info,
+.resenha-info {
+    padding: 1rem; /* Preenchimento */
+}
+
+.livro-info h3, .livro-info p {
+    color: black; /* Cor do texto */
+}
+
+.livro-info h3 {
+    margin-bottom: 0.5rem; /* Margem inferior */
+    font-size: 1.1rem; /* Tamanho da fonte */
+}
+
+.avaliacao {
+    color: #f1c40f; /* Cor da avaliação */
+    margin-top: 0.5rem; /* Margem superior */
+}
+
+/* ========== RESENHAS GRID ========== */
+.resenhas-grid {
+    display: grid; /* Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */
+    gap: 2rem; /* Espaçamento */
+    margin-top: 1rem; /* Margem superior */
+}
+
+.resenha-card img {
+    width: 100%; /* Largura total */
+    height: 200px; /* Altura */
+    object-fit: cover; /* Ajuste da imagem */
+}
+
+.resenha-info h3 {
+    font-size: 1.3rem; /* Tamanho da fonte */
+    margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+.resenha-info .autor {
+    color: var(--secondary-color); /* Cor do autor */
+    margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+.resenha-info .data {
+    color: var(--gray); /* Cor da data */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+.btn-ler-mais {
+    background: var(--secondary-color); /* Cor de fundo */
+    color: var(--white); /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Preenchimento */
+    border-radius: var(--border-radius); /* Raio de borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: var(--transition); /* Transição */
+}
+
+.btn-ler-mais:hover {
+    background: var(--primary-color); /* Cor ao passar o mouse */
+}
+
+/* ========== GÊNEROS GRID ========== */
+.generos-grid {
+    display: grid; /* Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas */
+    gap: 1rem; /* Espaçamento */
+    margin-top: 1rem; /* Margem superior */
+}
+
+.genero-card {
+    background: var(--white); /* Cor de fundo */
+    padding: 2rem; /* Preenchimento */
+    border-radius: var(--border-radius); /* Raio de borda */
+    text-align: center; /* Alinhamento do texto */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: var(--transition); /* Transição */
+}
+
+.genero-card:hover {
+    background: var(--secondary-color); /* Cor ao passar o mouse */
+    color: var(--white); /* Cor do texto ao passar o mouse */
+}
+
+.genero-card i {
+    font-size: 2rem; /* Tamanho do ícone */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center; /* Alinhamento do texto */
+    padding: 10px 0; /* Preenchimento */
+    background-color: #f1f1f1; /* Cor de fundo */
+    position: relative; /* Posição relativa */
+    bottom: 0; /* Alinhamento inferior */
+    width: 100%; /* Largura total */
+}
+
+.footer-content {
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centralização */
+    display: grid; /* Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+    gap: 2rem; /* Espaçamento */
+    padding: 0 2rem; /* Preenchimento */
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+.footer-section ul {
+    list-style: none; /* Sem estilo de lista */
+}
+
+.footer-section a {
+    color: var(--white); /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+    transition: var(--transition); /* Transição */
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color); /* Cor ao passar o mouse */
+}
+
+.social-links {
+    display: flex; /* Flexbox */
+    gap: 1rem; /* Espaçamento */
+}
+
+.social-links a {
+    font-size: 1.5rem; /* Tamanho do ícone */
+}
+
+.footer-bottom {
+    text-align: center; /* Alinhamento do texto */
+    padding: 1.5rem; /* Preenchimento */
+    margin-top: 2rem; /* Margem superior */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Borda superior */
+}
+
+/* ========== TEMA ESCURO ========== */
+[data-theme="dark"] {
+    --background-color: #1a1a1a; /* Cor de fundo */
+    --text-color: #ffffff; /* Cor do texto */
+}
+
+[data-theme="dark"] .livro-card,
+[data-theme="dark"] .resenha-card,
+[data-theme="dark"] .genero-card {
+    background: #2d2d2d; /* Cor de fundo */
+    color: var(--white); /* Cor do texto */
+}
+
+[data-theme="dark"] .header {
+    background: #2d2d2d; /* Cor de fundo do cabeçalho */
+}
+
+[data-theme="dark"] .header-top h1 {
+    color: var(--white); /* Cor do título */
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column; /* Direção da flexbox */
+        gap: 1rem; /* Espaçamento */
+        padding: 1rem; /* Preenchimento */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Direção da flexbox */
+        align-items: center; /* Alinhamento */
+        gap: 1rem; /* Espaçamento */
+    }
+
+    .carousel {
+        padding: 0 30px; /* Preenchimento */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Colunas responsivas */
+        text-align: center; /* Alinhamento do texto */
+    }
+
+    .social-links {
+        justify-content: center; /* Justificação */
+    }
+
+    main {
+        padding: 1rem; /* Preenchimento */
+    }
+}
+
+/* ========== ESTILOS DO BLOG ========== */
+h2 {
+    color: #333; /* Cor do título */
+}
+
+.gallery {
+    display: grid; /* Grid */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Colunas responsivas */
+    gap: 10px; /* Espaçamento */
+}
+
+.gallery img {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.2s; /* Transição */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Efeito de hover */
+}
+
+/* ========== ESTILOS DA BIBLIOTECA ========== */
+
+/* Reset básico */
+* {
+    margin: 0; /* Margem zero */
+    padding: 0; /* Preenchimento zero */
+    box-sizing: border-box; /* Box-sizing */
+    font-family: 'Arial', sans-serif; /* Fonte do corpo */
+}
+
+body {
+    background-color: #f8f8f8; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+}
+
+/* Cabeçalho com banner */
+header {
+    text-align: center; /* Alinhamento do texto */
+    background: linear-gradient(50deg, #6b11cb66, #af7bd770); /* Gradiente */
+    color: white; /* Cor do texto */
+    padding: 8px 8px; /* Preenchimento */
+}
+
+.banner h1 {
+    font-size: 2.5em; /* Tamanho da fonte */
+    animation: fadeIn 1.5s ease-in-out; /* Animação */
+}
+
+.banner p {
+    font-size: 1.2em; /* Tamanho da fonte */
+    margin: 10px 0; /* Margem */
+    animation: fadeIn 2s ease-in-out; /* Animação */
+}
+
+.buttons {
+    margin-top: 15px; /* Margem superior */
+}
+
+.btn {
+    display: inline-block; /* Exibição em bloco */
+    padding: 10px 20px; /* Preenchimento */
+    background: white; /* Cor de fundo */
+    color: #ba7ad699; /* Cor do texto */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 1em; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, background 0.3s ease; /* Transição */
+}
+
+.btn:hover {
+    background: #ffcc00; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Efeito de hover */
+}
+
+/* Navbar */
+nav ul {
+    display: flex; /* Flexbox */
+    justify-content: center; /* Justificação */
+    list-style: none; /* Sem estilo de lista */
+    background: #444; /* Cor de fundo */
+    padding: 10px; /* Preenchimento */
+}
+
+nav ul li {
+    margin: 0 15px; /* Margem */
+}
+
+nav ul li a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 1.2em; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Transição */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
+}
+
+/* Seção Sobre */
+.sobre {
+    text-align: center; /* Alinhamento do texto */
+    padding: 50px 20px; /* Preenchimento */
+    background: #fff; /* Cor de fundo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 20px auto; /* Margem */
+    width: 80%; /* Largura */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Galeria de Livros */
+.galeria {
+    text-align: center; /* Alinhamento do texto */
+    padding: 30px 10px; /* Preenchimento */
+}
+
+.gallery {
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Quebra de linha */
+    justify-content: center; /* Justificação */
+    gap: 20px; /* Espaçamento */
+}
+
+.livro {
+    position: relative; /* Posição relativa */
+    overflow: hidden; /* Ocultar overflow */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease-in-out; /* Transição */
+}
+
+.livro img {
+    width: 200px; /* Largura */
+    height: 300px; /* Altura */
+    object-fit: cover; /* Ajuste da imagem */
+    display: block; /* Exibição em bloco */
+}
+
+.livro p {
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    color: white; /* Cor do texto */
+    padding: 5px 10px; /* Preenchimento */
+    position: absolute; /* Posição absoluta */
+    bottom: 0; /* Alinhamento inferior */
+    width: 100%; /* Largura total */
+    text-align: center; /* Alinhamento do texto */
+    font-size: 1.1em; /* Tamanho da fonte */
+    opacity: 0; /* Opacidade inicial */
+    transition: opacity 0.3s ease-in-out; /* Transição */
+}
+
+.livro:hover {
+    transform: scale(1.1); /* Efeito de hover */
+}
+
+.livro:hover p {
+    opacity: 1; /* Opacidade ao passar o mouse */
+}
+
+/* Seção Novidades */
+.novidades {
+    text-align: center; /* Alinhamento do texto */
+    padding: 30px; /* Preenchimento */
+    background: #eee; /* Cor de fundo */
+}
+
+.novidades h2 {
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.novidades ul {
+    list-style: none; /* Sem estilo de lista */
+}
+
+.novidades li {
+    margin: 10px 0; /* Margem */
+}
+
+.novidades li a {
+    text-decoration: none; /* Sem sublinhado */
+    color: #2575fc; /* Cor do link */
+    font-size: 1.2em; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Transição */
+}
+
+.novidades li a:hover {
+    color: #ff5733; /* Cor ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background: #333; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 15px; /* Preenchimento */
+    margin-top: 30px; /* Margem superior */
+}
+
+footer a {
+    color: #ffcc00; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Opacidade inicial */
+        transform: translateY(-20px); /* Movimento inicial */
+    }
+    to {
+        opacity: 1; /* Opacidade final */
+        transform: translateY(0); /* Movimento final */
+    }
+}
+
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0; /* Margem zero */
+    padding: 0; /* Preenchimento zero */
+    box-sizing: border-box; /* Box-sizing */
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte do corpo */
+    background-color: #f5f5f5; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha */
+    transition: background-color 0.3s ease; /* Transição */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2ecc71; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 60px 20px; /* Preenchimento */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra */
+    transition: background-color 0.3s ease; /* Transição */
+}
+
+header h1 {
+    font-size: 3rem; /* Tamanho da fonte */
+    margin-bottom: 15px; /* Margem inferior */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+header p {
+    font-size: 1.3rem; /* Tamanho da fonte */
+    margin-bottom: 25px; /* Margem inferior */
+}
+
+header .buttons a {
+    margin: 0 15px; /* Margem */
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none; /* Sem estilo de lista */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Justificação */
+    background-color: #34495e; /* Cor de fundo */
+    padding: 15px 0; /* Preenchimento */
+    margin-top: 0; /* Margem superior */
+}
+
+nav ul li {
+    margin: 0 15px; /* Margem */
+}
+
+nav ul li a {
+    color: white; /* Cor do link */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    text-decoration: none; /* Sem sublinhado */
+    font-weight: bold; /* Negrito */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #2ecc71; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Sublinhado */
+}
+
+/* Seção de Postagens */
+.postagens {
+    max-width: 1200px; /* Largura máxima */
+    margin: 40px auto; /* Margem */
+    padding: 30px; /* Preenchimento */
+    background-color: rgba(129, 138, 123, 0.797); /* Cor de fundo */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição */
+}
+
+.postagens:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Efeito de hover */
+}
+
+h2 {
+    font-size: 2.2rem; /* Tamanho da fonte */
+    color: #d9e1e9; /* Cor do título */
+    margin-bottom: 30px; /* Margem inferior */
+    text-align: center; /* Alinhamento do texto */
+}
+
+/* Post */
+.post {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Justificação */
+    margin-bottom: 40px; /* Margem inferior */
+    padding: 20px; /* Preenchimento */
+    background-color: #ecf0f1; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição */
+}
+
+.post:hover {
+    transform: translateY(-8px); /* Efeito de hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Efeito de sombra */
+}
+
+.post-imagem img {
+    width: 100%; /* Largura total */
+    max-width: 350px; /* Largura máxima */
+    border-radius: 12px; /* Bordas arredondadas */
+    transition: transform 0.3s ease; /* Transição */
+}
+
+.post-imagem img:hover {
+    transform: scale(1.1); /* Efeito de hover */
+}
+
+.post-texto {
+    flex-grow: 1; /* Crescimento flexível */
+    margin-left: 20px; /* Margem esquerda */
+}
+
+.post h3 {
+    font-size: 1.8rem; /* Tamanho da fonte */
+    color: #2ecc71; /* Cor do título */
+    margin-bottom: 15px; /* Margem inferior */
+    transition: color 0.3s ease; /* Transição */
+}
+
+.post h3 a {
+    color: inherit; /* Cor herdada */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+.post h3 a:hover {
+    color: #27ae60; /* Cor ao passar o mouse */
+}
+
+.post p {
+    font-size: 1.1rem; /* Tamanho da fonte */
+    line-height: 1.7; /* Altura da linha */
+    color: #7f8c8d; /* Cor do texto */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.post a.btn {
+    text-decoration: none; /* Sem sublinhado */
+    padding: 12px 28px; /* Preenchimento */
+    background-color: #2ecc71; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Negrito */
+    border-radius: 8px; /* Bordas arredondadas */
+    display: inline-block; /* Exibição em bloco */
+    transition: background-color 0.3s ease; /* Transição */
+}
+
+.post a.btn:hover {
+    background-color: #27ae60; /* Cor ao passar o mouse */
+}
+
+/* Seção Sobre o Blog */
+.sobre {
+    background-color: #f4f6f7; /* Cor de fundo */
+    padding: 40px 20px; /* Preenchimento */
+    margin-top: 50px; /* Margem superior */
+    text-align: center; /* Alinhamento do texto */
+    border-radius: 12px; /* Bordas arredondadas */
+}
+
+.sobre h2 {
+    font-size: 2.4rem; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.sobre p {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    line-height: 1.8; /* Altura da linha */
+    color: #34495e; /* Cor do texto */
+}
+
+/* Rodapé */
+footer {
+    background-color: #506e8b7a; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 25px 0; /* Preenchimento */
+    margin-top: 50px; /* Margem superior */
+}
+
+footer a {
+    color: white; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+footer a:hover {
+    color: #2ecc71; /* Cor ao passar o mouse */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .post {
+        flex-direction: column; /* Direção da flexbox */
+        align-items: center; /* Alinhamento */
+    }
+
+    .post-imagem img {
+        max-width: 100%; /* Largura máxima */
+    }
+
+    .post-texto {
+        margin-left: 0; /* Margem esquerda zero */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Tamanho da fonte */
+    }
+}
+
+body {
+    background-image: url('https://i.pinimg.com/736x/78/b5/0c/78b50c130b1c1e180ce411f55915ae84.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobertura */
+    background-attachment: fixed; /* Anexado */
+    background-position: center; /* Centralizado */
+    background-repeat: no-repeat; /* Sem repetição */
+    color: #fff; /* Cor do texto */
+}
+
+/* Adicionando sombras ao texto para melhorar a legibilidade sobre o fundo */
+.header-text h1, .header-text p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra do texto */
+}
+
+.header-banner {
+    position: relative; /* Posição relativa */
+    max-height: 50px; /* Altura máxima */
+    overflow: hidden; /* Ocultar overflow */
+}
+
+.header-banner-img {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    object-fit: cover; /* Ajuste da imagem */
+}
+
+.quote {
+    font-style: italic; /* Estilo itálico */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    margin-top: 10px; /* Margem superior */
+}
+
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
+    padding: 10px 0; /* Preenchimento */
+}
+
+.nav-menu li {
+    display: inline-block; /* Exibição em bloco */
+    margin: 0 15px; /* Margem */
+}
+
+.nav-menu a {
+    color: #fff; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 1.2rem; /* Tamanho da fonte */
+}
+
+.nav-buttons {
+    float: right; /* Flutuação à direita */
+    margin-top: 10px; /* Margem superior */
+}
+
+.nav-buttons button {
+    background-color: #444; /* Cor de fundo */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Preenchimento */
+    color: white; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    margin-left: 10px; /* Margem esquerda */
+}
+
+/* Estilos para as seções de livros */
+.categoria h2, .destaques h2, .ultimas-resenhas h2, .generos h2 {
+    text-align: center; /* Alinhamento do texto */
+    margin-bottom: 30px; /* Margem inferior */
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #f5f5f5; /* Cor do texto */
+}
+
+.livro-itens {
+    display: grid; /* Grid */
+    grid-template-columns: repeat(3, 1fr); /* Colunas */
+    gap: 20px; /* Espaçamento */
+}
+
+.item {
+    background: rgba(0, 0, 0, 0.5); /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Preenchimento */
+    text-align: center; /* Alinhamento do texto */
+    transition: transform 0.3s ease; /* Transição */
+}
+
+.item:hover {
+    transform: translateY(-10px); /* Efeito de hover */
+}
+
+.item img {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.item-info h3 {
+    margin-top: 10px; /* Margem superior */
+    font-size: 1.3rem; /* Tamanho da fonte */
+}
+
+.item-info p {
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #f5f5f5; /* Cor do texto */
+}
+
+.carousel-btn {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    cursor: pointer; /* Cursor de ponteiro */
+    padding: 10px; /* Preenchimento */
+}
+
+.carousel-container {
+    display: flex; /* Flexbox */
+    overflow: hidden; /* Ocultar overflow */
+    margin: 0 20px; /* Margem */
+}
+
+.carousel-container img {
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática */
+    margin: 0 10px; /* Margem */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.footer-content {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Justificação */
+    flex-wrap: wrap; /* Quebra de linha */
+    padding: 40px 10%; /* Preenchimento */
+    background-color: #111; /* Cor de fundo */
+}
+
+.footer-section {
+    width: 30%; /* Largura */
+}
+
+.footer-section h3 {
+    margin-bottom: 10px; /* Margem inferior */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+}
+
+.footer-section p, .footer-section ul {
+    color: #ccc; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+.footer-section a {
+    color: #ccc; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+.footer-section a:hover {
+    color: #f5f5f5; /* Cor ao passar o mouse */
+}
+
+.footer-bottom {
+    background-color: #222; /* Cor de fundo */
+    text-align: center; /* Alinhamento do texto */
+    padding: 10px; /* Preenchimento */
+}
+
+.logo-container {
+    position: absolute; /* Posição absoluta */
+    top: 30px; /* Alinhamento superior */
+    left: 50%; /* Alinhamento à esquerda */
+    transform: translateX(-50%); /* Centralização */
+}
+
+.logo {
+    width: 100px; /* Largura */
+    height: 100px; /* Altura */
+    border-radius: 50%; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Estilo para a seção de Últimas Resenhas */
+.ultimas-resenhas h2, 
+.ultimas-resenhas p {
+    color: rgb(254, 251, 251); /* Cor do texto */
+}
+
+/* Estilo para as resenhas */
+.resenha-card h3 {
+    color: #333; /* Cor do título da resenha */
+}
+
+.resenha-card .autor, 
+.resenha-card .data {
+    color: #555; /* Cor do texto do autor e da data */
+}
+.resenha-card.autor,
+.resenha-card.resumo{
+    color: #000;
+}
